@@ -1,0 +1,74 @@
+<html>
+    <head><title>loops</title></head>
+    <body>
+        <button onclick="printfun()">printing 1-10 numbers</button>
+        <p>
+        1.printing numbers
+        2.reverse
+        3.printing numbers one after another
+        4.break after odd numbers
+        5.printing prime
+        </p>
+        <h4 id="print"></h4>
+        <h4 id="rev"></h4>
+        <h4 id="lineBreak"></h4>
+        <h4 id="even"></h4>
+        <h4 id="p"></h4>
+        <script>
+            function printfun()
+            {
+            var a=[];
+            var text="";
+            var txt="";
+            var prime="";
+            var count=0;
+                for(var i=1;i<=10;i++)
+                {
+                   a.push(i);
+                }
+            
+                document.getElementById('print').innerHTML=a;
+                document.getElementById('rev').innerHTML=a.reverse();
+                for(var i=1;i<10;i++)
+                {
+                   text+="<br>"+a[i];
+                }
+            
+                document.getElementById('lineBreak').innerHTML=text;
+                for(var i=1;i<10;i++)
+                {
+                    if(i%2==0)
+                    {
+                        txt+="<br>"+a[i];
+                    }
+                 
+                  else
+                  {
+                    txt+=a[i];
+                  }
+                 
+                }
+                document.getElementById('even').innerHTML=txt;
+                for(var i=1;i<=100;i++)
+                {
+                    count=0;
+                    for(var j=2;j<i;j++)
+                    {
+                        if(i%j==0)
+                        {
+                         count++;
+                        }
+                    }
+                  
+                   if(count<=0)
+                   {
+                    prime+=i+",";
+                    console.log(i);
+                   }
+                  
+                }
+                document.getElementById('p').innerHTML=prime;
+            }
+        </script>
+    </body>
+</html>

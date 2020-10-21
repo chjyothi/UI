@@ -1,0 +1,84 @@
+<html>
+    <head><title>arrays</title></head>
+    <body>
+        <button onclick="displayQuotes()">Display quotes</button>
+        <p>These are most popular quotes</p>
+        <p id="q"></p>
+        <hr>
+        <script>
+       function displayQuotes(){
+           var a="";
+           var temp;
+           var arr=[
+           'Be ',
+           'You ',
+           'The ',
+           'You miss ',
+           'Courage '
+           ]
+           console.log("origianl--"+arr);
+           for(var i=0;i<arr.length;i++)
+           {
+             a+= "==>"+arr[i]+"<br>";
+           }
+          // document.getElementById('quote').innerHTML=a;
+           temp=arr.pop();
+         console.log("pop--"+temp);
+         var t1=arr.reverse();
+         console.log("reverse---"+t1);
+         console.log("length--"+arr.length);
+         //applying shift on fourth array element
+         console.log("shift--"+arr.shift())
+         console.log("sorting--"+arr.sort());
+         arr.push("deserve");
+         console.log("push--"+arr);
+         arr.unshift("unshift");
+         console.log("unshift--"+arr);
+
+
+        var array1 =['string1','string2', 'string3', 'string4', 'string5'];
+        console.log("")
+        console.log('array values--'+array1);
+        console.log("slice(2,4)--"+arr.slice(2,4));
+        array1.splice(1,0,'integer');
+        console.log("splice(1,0,'integer')--"+array1);
+        array1.splice(1,1,'integer2');
+        console.log("splice(1,1,'integer2')--"+array1);
+        console.log("")
+
+        var a=['a','b','c','d'];
+        var b=['1','2','3','4'];
+        console.log("a--"+a);
+        console.log("b--"+b);
+        var ab=a.concat(b);
+        console.log("concat ab--"+ab);
+        for(var i=0;i<ab.length;i++)
+        {
+            console.log(ab[i]);
+        }
+        var index=ab.indexOf('d');
+        console.log("index--"+index);
+        ab.splice(index,1);
+        console.log("after 'd' deletion--"+ab);
+        ab.splice(index,1,'Jyothi');
+        console.log("after '1' deletion--"+ab);
+
+        var a1="";
+        var ar=['Be ',
+           'You ',
+           'The ',
+           'You miss ',
+           'Courage ',
+           'as',
+           'you']
+        for(var i=0;i<ar.length;i++)
+           {
+             a1+= "-->"+ar[i]+"<br>";
+           }
+        document.getElementById('q').innerHTML=a1;
+       }
+
+   
+        </script>
+    </body>
+</html>

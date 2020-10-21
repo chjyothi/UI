@@ -1,0 +1,47 @@
+<html>
+    <head><title>incremental array</title></head>
+    <body>
+        <button onclick="FareEstimate()">Estimation</button>
+        <p id="demo"></p>
+    </body>
+    <script>
+        function FareEstimate()
+        {   
+    const object = { UberX: 
+    {
+        cost_min :0.2,
+        cost_mile:1.1
+    },
+    
+     UberXL:
+     {
+        cost_min :0.35,
+        cost_mile:0.18 
+     } ,
+     UberPlus: {
+        cost_min :0.4,
+        cost_mile:2.3 
+     } ,
+      UberBlack: 
+      {
+        cost_min :0.45,
+        cost_mile:3.5 
+      },
+      UberSUV: {
+        cost_min :0.65,
+        cost_mile:4.6 
+      } };                                                                                                                                                                                                                                                                                                                                        
+    let l=30, c=20, final,fval;
+     for (const property in object) {
+      if(c>=(object[property]*l))
+         {
+         final=property;
+         fval=object[property]*l;
+          }
+ 
+}
+ document.getElementById("demo").innerHTML="you can offord " +final+ " with " +fval;
+        }
+          
+    </script>
+</html>

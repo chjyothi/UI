@@ -1,0 +1,81 @@
+<html>
+    <head><title>assignments</title>
+        <script>
+          function discount()
+          {
+              var age=document.getElementById('input').value;
+              console.log(age)
+            if(age<=14)
+            {
+                alert("not allowed for discount");
+            }
+            else if(age>14 && age<65 )
+            {
+                alert("Regular price");
+            }
+            else 
+            {
+                alert("special discount");
+            }
+          }
+            function coupon() {
+                var newage=prompt("enter your age");
+                if(newage==14)
+                {
+                    alert("coupon1");
+                }
+                else if(newage==21)
+                {
+                    alert("coupon2");
+                }
+                else if(newage==30)
+                {
+                    alert("coupon3");
+                }
+                else {
+                    alert("no coupon");
+                }
+
+            }
+
+            function specials(){
+       var day=document.getElementById('day').value;
+  switch (day.toUpperCase()) {
+  case "SUNDAY":
+        document.getElementById('demo').innerHTML="we serve pastha on sunday!"
+    break;
+  case "MONDAY":
+  document.getElementById('demo').innerHTML="we serve hamburger on mondays!"
+    break;
+  case "TUESDAY":
+  document.getElementById('demo').innerHTML="we serve italin dishes on tuesday!!"
+    break;
+  case "WEDNESDAY":
+  document.getElementById('demo').innerHTML="we serve veg-snack on Wednesday!"
+    break;
+  case "THURSDAY":
+  document.getElementById('demo').innerHTML="we serve checkn-kabab on Thursday!"
+    break;
+  case "FRIDAY":
+  document.getElementById('demo').innerHTML="we serve cheese-rolls on Friday!"
+    break;
+  case "SATURDAY":
+  document.getElementById('demo').innerHTML="we serve fried rice on Saturday!"
+}
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Outputs of the programs</h1>
+        <label>enter your age</label>
+        <input type="number"  id="input" min=0 max=100 required/>
+        <button onclick="discount()">submit</button>
+        <hr>
+        <button onclick="coupon()">which coupon I get?</button>
+        <hr>
+        <label>enter day</label>
+        <input type="text" id="day"/>
+        <button type="text" onclick="specials()">show special item</button>
+        <h2 id="demo"></h2>
+    </body>
+</html>

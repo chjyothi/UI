@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>form</title>
+        <style>
+           
+            .flex-container {
+               display: flex;
+               flex-direction: column;
+               justify-content: space-around;
+               flex-wrap: wrap;
+               background-color: DodgerBlue;
+               flex-shrink: 2;
+              }
+
+         .flex-container > div {
+         background-color: #f1f1f1;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+              
+        </style>
+    </head>
+    <body>
+        <p id="error"></p>
+        <form name="feedback" action="#" method=post>
+            <div class="flex-container">
+                <div><label for="firstName">FirstName</label>
+                    <input type="text" id="firstName" onchange="checkFilled()"required/>
+                    <label for="LastName">LastName</label>
+                    <input type="text" id="secondName" required/></div>
+                <div>Gender: 
+                    <input type="radio" name="gender" value="Male"> Male
+                 <input type="radio" name="gender" value="Female"> Female
+                 
+                <div> <label for="state">state</label>
+                    <select name="state" id="state">
+                        <option value="-1">State</option>
+                        <option value="MO">MO</option>
+                        <option value="NO">NO</option>
+                        <option value="LA">LA</option>
+                        <option value="TX">TX</option>
+                        <option value="CA">CA</option>
+                    </select></div>  
+                <div> <input type="submit" name="SubmitButton" value="Submit" onClick="ValidateForm(this.form)">
+                    <input type="reset" value="Reset"></div>
+              </div>
+        </form>
+        <script>
+           function checkFilled() {
+               console.log("calling");
+              var inputVal = document.getElementById("firstName");
+              if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "red";
+                   }
+             else{
+              inputVal.style.backgroundColor = "";
+                 }
+              }
+
+
+              function ValidateForm(form){
+                var check = document.form.state.value;
+                 console.log("for drop down list"+check);
+                 if(check == -1)
+                 {
+                    alert("please select any state");
+          
+                 }
+               ErrorText= "";
+                if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked    == false ) ) 
+                   {
+                       alert("Please choose your Gender: Male or Female");
+               return false;
+                 }
+               if (ErrorText= "") { form.submit() }
+               else {
+                   document.getElementById('error').innerHTML=ErrorText;
+               }
+                }
+        </script>
+    </body>
+</html>

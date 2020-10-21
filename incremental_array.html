@@ -1,0 +1,90 @@
+<html>
+    <head><title>incremental array</title></head>
+    <body>
+        <input type="text" id="val" value="6,7,2,3,4,7,8,9,10,11,12,3,4,5"/>
+        <button onclick="incrementCheck()">Submit</button>
+        <p id="demo"></p>
+    </body>
+    <script>
+        function incrementCheck() {
+            console.log("calling function");
+            let a1 = document.getElementById("val").value;
+            var a = Array.from(a1.split(','),Number);
+           // let a = Array.of(a1.split(','));
+          // let a = Array.of(a1);
+        // let a=[6,7,2,3,4,7,8,9,10,11,12,3,4,5];
+          //let a=[1,2,3,4,1,2,3,4,5];
+          //2 3 4
+          //temp==> 1 2 3
+            console.log(a.length);
+            let ttemp=[];
+            let temp=[];
+            let l=0;
+            for(var i=1;i<a.length-1;i++)
+            {
+            var t1=a[i]-a[i-1];//1
+            var t2=a[i+1]-a[i];//1
+            if((t1>0) && (t2>0))//true
+            {
+               
+               if(t1==t2)//1==1
+               {
+              //   console.log("****equal***"+a[i-1]+"-"+a[i]+"-"+a[i+1]);
+                 if(temp.length==0)
+                   {
+                    temp.push(a[i-1]);
+                    temp.push(a[i]);
+                    temp.push(a[i+1]);
+                  
+                   }
+                   else{
+                       temp.push(a[i+1]);
+                   }
+               }
+               else{
+                  // console.log("****not equal***"+a[i-1]+"-"+a[i]+"-"+a[i+1]);
+                   if(temp.length>0)
+                   {
+                    console.log("one incremental array--------------"+temp);
+                    if(ttemp.length<temp.length)
+                    {
+                        ttemp=temp;
+                      //  console.log("enters--------------"+ttemp);
+                    }
+                   }
+                   
+                   // ttemp=temp;
+                    temp.length=0;
+                   
+                
+                  
+               }
+            
+            }
+            else {
+               
+                    
+                  // console.log("****at incremental array***"+a[i-1]+"-"+a[i]+"-"+a[i+1]);
+                   if(temp.length>0)
+                   {
+                    console.log("one incremental array--------------"+temp);
+                    if(ttemp.length<=temp.length)
+                    {
+                        ttemp=temp;
+                        console.log("enters--------------"+ttemp);
+                    }
+                   }
+                    temp.length=0;
+                   
+                
+            }
+           
+           
+            }
+            console.log("final::"+ttemp);
+           
+          
+            
+        }
+    </script>
+</html>

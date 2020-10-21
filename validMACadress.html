@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ip"></p>
+    <p id="demo"></p>
+    <script>
+       function ValidMacAdress(str){
+        // const str = '00-1B-63-84-45-16';
+        if(str.length!=17)
+         { 
+             console.log("false1")
+          return false
+         }
+       const strCopy = str.split('-');
+       if(strCopy.length!=6)
+        {
+         console.log("false2");
+         return(false)
+        }
+// expected output: Array ["The quick brown fox jumps over the lazy dog."]
+      for(i in strCopy)
+       {
+       if(strCopy[i].length!=2)
+        {
+         console.log("false3")
+         return(false)
+        }
+        if(("0"<=strCopy[i][0]<="9" || "A"<=strCopy[i][0]<="F") && ("0"<=strCopy[i][1]<="9" || "A"<=strCopy[i][1]<="F")) 
+         return true
+          else
+          {
+            console.log("false4")
+            return false
+          }
+         
+      
+}     
+  
+    }
+    var result=ValidMacAdress("00-1B-63-84-45-E6");
+    document.getElementById('ip').innerHTML="00-1B-63-84-45-E6";
+    document.getElementById('demo').innerHTML = result;
+    
+    </script>
+</body>
+</html>

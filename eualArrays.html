@@ -1,0 +1,41 @@
+<html>
+    <head><title>incremental array</title></head>
+    <body>
+        <h2>please enter , seperated values</h2>
+        <br>
+        <label>1st Array:</label>
+        <input type="text" id="inputArray1" value="1,2">
+        <label>2nd Array:</label>
+        <input type="text" id="inputArray2" value="1,2">
+        <br>
+        <button onclick="equalCheck()">Submit</button>
+        <hr>
+        <h2 id="res"></h2>
+    </body>
+    
+    <script>
+
+         function equalCheck() {
+            console.log("calling function");
+            let a1 = document.getElementById("inputArray1").value;
+            let b1 = document.getElementById("inputArray2").value;
+            var a = Array.from(a1.split(','),Number);
+            let a_uniques = [...new Set(a)];
+           // console.log("a-uniues--"+a_uniques);
+            var b = Array.from(b1.split(','),Number);
+            let b_uniques = [...new Set(b)];
+           // console.log("b-uniues--"+b_uniques);
+            if(a_uniques.length == b_uniques.length)
+            {
+                console.log("similar");
+                document.getElementById("res").innerHTML="They are similar";
+            }
+            else{
+                console.log("not similar");
+                document.getElementById("res").innerHTML="They are not similar";
+            }
+         }
+  
+    </script>
+    </html>
+      

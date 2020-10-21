@@ -1,0 +1,29 @@
+<html><head>
+    <title>largest string</title>
+</head>
+<body>
+    <script>
+        function largeString(arr)
+        {
+            var temp=arr;
+            var t=[];
+            temp.sort(function(a,b){
+            return  b.length-a.length; //ASC, For Descending order use: b - a
+            });
+            console.log("Input array--"+arr);
+          console.log("sorted arrat--"+temp);
+         
+          t.push(temp[0]);
+          for(var i=1;i<temp.length;i++)
+          {
+            if((temp[0].length == temp[i].length))
+            {
+                t.push(temp[i]);
+            }
+          }
+          console.log("largest strings are:"+t);
+        }
+    </script>
+    <button onclick="largeString(['SRH','CSK','MIIII','PK','NONTI','MONTI','MIjjI'])">print lagest strings</button>
+</body>
+</html>
