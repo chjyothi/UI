@@ -1,0 +1,29 @@
+#bd {
+    text-align: center;
+    font-size: 38px;
+    margin-top: 20px;
+   
+}
+#headDiscription {
+    margin-top: -47px;
+    font-size: 23px;
+    color: white;
+}
+button {
+    height: 30px;
+    background-color:rgb(241, 241, 145);
+    border-color: rgb(194, 194, 93);
+    border-radius: 0.5em;
+}
+#body01 {
+    background-color: #75dbeb;
+    height: 670px;
+    width: 959px;
+    margin-left: 164px;
+}
+#iframe{
+    margin-top: 10px;
+    border-color: aqua;
+    border-radius: 0.5em;
+    background-color: white;
+}

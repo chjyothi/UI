@@ -1,0 +1,32 @@
+<html>
+    <head><title>website</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body id="bd">
+        <div id="body01">
+            <h4>My websitesite Title</h4>
+            <p id="headDiscription">A short description of what the website is about</p>
+            <div>
+            <nav>
+                <button id="homePage" onclick="setUrl('./homePage.html')">Home Page</button>
+                <button id="productsPage" onclick="setUrl('./products.html')">Products</button>
+                <button onclick="setUrl('./about.html')">About Us</button>
+                <button href="">Contact Us</button>
+                <button href="">Links</button>
+                <button href="">page1</button>
+                <button href="">page2</button>
+                <button href="">page3</button>
+                <button href="">page3</button>
+            </nav>
+            </div>
+            <div>
+                <iframe  src="./homePage.html" height="500" width="80%" id="iframe"></iframe>
+            </div>
+            <script>
+            function setUrl(source) {
+                document.getElementById('iframe').src=source;
+            }
+            </script>
+        </div>
+    </body>
+</html>

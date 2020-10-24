@@ -1,0 +1,50 @@
+#heading {
+    color: rebeccapurple;
+    width: 505px;
+    position: absolute;
+    margin-top: 196px;
+    font-size: 42px;
+    margin-left: 36px;
+}
+.loginDiv {
+    background-color: rgb(236, 230, 238);
+    height: 300px;
+    width: 417px;
+    float: right;
+    margin-right: 156px;
+    margin-top: 88px;
+}
+#loginhead {
+    text-align: center;
+    font-size: 23px;
+}
+#username{
+    height: 36px;
+    font-size: 14px;
+}
+#password {
+    height: 36px;
+    font-size: 14px;
+    margin-top: 9px;
+}
+#inputBox{
+    margin-left: 125px;
+}
+#submitBtn {
+    height: 29px;
+    width: 105px;
+    margin-left: 167px;
+    margin-top: 6px;
+}
+#forgotLink {
+    margin-left: 169px;
+    font-size: 15px;
+    color: #b45454;
+}
+#newAccBtn {
+    height: 28px;
+    width: 162px;
+    margin-left: 145px;
+    background: #8be39a;
+    margin-top: 8px;
+}
